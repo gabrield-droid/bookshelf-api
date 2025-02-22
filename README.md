@@ -8,7 +8,14 @@ This project is an API that can add, edit, delete, and show books. It was a subm
      nvm install v18.13.0
      ```
 2. Install packages required in the project directory
-   * Open terminal and change it dirrectory to the project directory and type this command below
-   * ```bash
+   * Open a terminal and change the directory to the project directory and type this command below:
+     ```bash
      npm install
      ```
+## Run the API
+* Open a terminal and change the directory to the project directory.
+* Type this command to run the API:
+  ```bash
+  npm run start
+  ```
+It will create a web server than run on [http://localhost:9000](http://localhost:9000).
