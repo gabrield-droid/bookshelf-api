@@ -2,8 +2,8 @@
 
 This project is a REST API that can add, edit, delete, and show books. It was a submission project to acquire a certificate from Dicoding.
 
-### Limit:
-This API only stores the data in an array variable. The data will be lost every restart.
+### Limitation/s:
+This API only stores the data in an array variable. The data will be lost upon every restart.
 
 ## Data structure:
 
@@ -27,12 +27,18 @@ Data example:
 The properties ```id```, ```finished```, ```insertedAt```, ```updatedAt``` are managed by the server.
 The other properties are input by the client.
 
-## Initialisation
-1. Install NodeJS v18.13.0 LTS via nvm
+## Installation
+1. Make sure you have ```nvm``` installed. If you don't have, install it using these commands below:
+   * ```bash
+     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+     ```
+     You could skip this step if you would like to install NodeJS in the other way
+2. Install NodeJS v18.13.0 LTS via nvm:
    * ```bash
      nvm install v18.13.0
+     nvm use v18.13.0
      ```
-2. Install packages required in the project directory
+3. Install packages required in the project directory:
    * Open a terminal and change the directory to the project directory and type this command below:
      ```bash
      npm install
@@ -43,7 +49,7 @@ The other properties are input by the client.
   ```bash
   npm run start
   ```
-  It will create a web server than runs on [http://localhost:9000](http://localhost:9000).
+  It will create a web server that runs on [http://localhost:9000](http://localhost:9000).
 
 ## How to use the API
 
@@ -104,7 +110,7 @@ The other properties are input by the client.
    * Query parameters (optional, for filters):
      * **?name**, shows all books that have the name containing the value of this query.
      * **?reading**, shows all reading books if its value is ```true``` or ```1```, or all unread books if its value is ```false``` or ```0```.
-     * **?finished**, showa all finished books  if its value is ```true``` or ```1```, or all unfinished books if its value is ```false``` or ```0```.
+     * **?finished**, shows all finished books  if its value is ```true``` or ```1```, or all unfinished books if its value is ```false``` or ```0```.
   
    Response:
    1. If there are some books:
@@ -231,7 +237,7 @@ The other properties are input by the client.
           "message": "Gagal memperbarui buku. Id tidak ditemukan"
         }
         ```
-   4. If the book is successfully added:
+   4. If the book is successfully updated:
       * Status Code: **200**
       * Response Body:
         ```json
